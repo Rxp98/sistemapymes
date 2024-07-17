@@ -1,0 +1,53 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.navbar-primary {
+    background-color: #007bff; /* Azul principal */
+    color: #fff;
+}
+
+.sidebar-success-primary {
+    background-color: #343a40; /* Color de fondo del sidebar */
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #495057; /* Color al pasar el cursor */
+}
+
+.nav-icon {
+    font-size: 18px;
+}
+
+.brand-link {
+    background-color: #007bff; /* Azul principal */
+    color: #fff;
+}
+
+.brand-link .brand-image {
+    opacity: 1;
+}
+
+.brand-link .brand-text {
+    font-weight: 700;
+}
+
+.user-panel .image img {
+    border-radius: 50%;
+}
+
+.primary-color {
+    color: #28a745; /* Verde */
+}
+
+.secondary-color {
+    color: #17a2b8; /* Cian */
+}

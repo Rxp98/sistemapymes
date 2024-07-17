@@ -1,0 +1,209 @@
+/* custom.css */
+
+/* Table Styles */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table th,
+.table td {
+    padding: 0.1rem; /* Ajuste de padding para hacer las filas más delgadas */
+    vertical-align: middle; /* Centrar el contenido verticalmente */
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.table thead th {
+    vertical-align: middle; /* Centrar el contenido verticalmente */
+    border-bottom: 2px solid #dee2e6;
+    background-color: #103d5b;
+    color: gray;
+}
+
+.table tbody tr:hover {
+    background-color: rgb(86, 86, 88);
+}
+
+.table tfoot th {
+    border-top: 2px solid #dee2e6;
+    background-color: #103d5b;
+    color: #fff;
+}
+
+
+/* Button Styles */
+.btn {
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card,
+.table {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Button Animation */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 300%;
+    background: rgba(24, 228, 201, 0.3);
+    transition: all .5s;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-primary:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* archivo: datatables-custom.css */
+
+/* Estilo para los botones de DataTables */
+.dt-button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px; /* Borde redondeado */
+    background-color: #4CAF50; /* Color de fondo de los botones */
+}
+
+.dt-button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Agranda el botón al pasar el ratón */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+/* Estilo específico para cada botón extendido de DataTables */
+.buttons-copy {
+    background-color: #2196F3; /* Color de fondo para botón Copiar */
+}
+
+.buttons-copy:hover {
+    background-color: #1976D2; /* Color de fondo al pasar el ratón */
+}
+
+.buttons-pdf {
+    background-color: #f44336; /* Color de fondo para botón PDF */
+}
+
+.buttons-pdf:hover {
+    background-color: #da190b; /* Color de fondo al pasar el ratón */
+}
+
+.buttons-csv {
+    background-color: #ff9800; /* Color de fondo para botón CSV */
+}
+
+.buttons-csv:hover {
+    background-color: #e68a00; /* Color de fondo al pasar el ratón */
+}
+
+.buttons-excel {
+    background-color: #4CAF50; /* Color de fondo para botón Excel */
+}
+
+.buttons-excel:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.buttons-print {
+    background-color: #9C27B0; /* Color de fondo para botón Imprimir */
+}
+
+.buttons-print:hover {
+    background-color: #7B1FA2; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el buscador y otros inputs */
+.dataTables_filter input {
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* Estilo para el contenedor de la tabla */
+.dataTables_wrapper .dt-buttons {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+
+.dataTables_wrapper .dataTables_info {
+    float: left;
+    margin-top: 5px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    margin-top: 5px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Productos</h2>
+        <form id="productoForm">
+            <div class="form-group">
+                <label for="nombreProducto"><i class="fas fa-tag"></i></label>
+                <input type="text" id="nombreProducto" name="nombre_producto" placeholder="Nombre del Producto" required onkeyup="autocomplete(this, 'nombre_producto')">
+                <ul id="suggestionsNombreProducto" class="suggestions"></ul>
+            </div>
+            <div class="form-group">
+                <label for="seccion"><i class="fas fa-layer-group"></i></label>
+                <input type="text" id="seccion" name="seccion" placeholder="Sección" required onkeyup="autocomplete(this, 'seccion')">
+                <ul id="suggestionsSeccion" class="suggestions"></ul>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicación" required onkeyup="autocomplete(this, 'ubicacion')">
+                <ul id="suggestionsUbicacion" class="suggestions"></ul>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar</button>
+                <button type="reset" class="btn btn-secondary"><i class="fas fa-redo"></i> Limpiar</button>
+                <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+                <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function autocomplete(input, field) {
+            const suggestions = document.getElementById(`suggestions${capitalizeFirstLetter(field)}`);
+            const term = input.value;
+
+            if (term.length < 2) {
+                suggestions.innerHTML = '';
+                return;
+            }
+
+            fetch(`autocomplete.php?term=${term}&field=${field}`)
+                .then(response => response.json())
+                .then(data => {
+                    suggestions.innerHTML = '';
+                    data.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        li.addEventListener('click', () => {
+                            input.value = item;
+                            suggestions.innerHTML = '';
+                        });
+                        suggestions.appendChild(li);
+                    });
+                });
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    </script>
+</body>
+</html>

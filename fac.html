@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 800px;
+            margin: auto;
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .details {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .details th, .details td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .summary {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .summary th, .summary td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CASA FERNANDEZ SRL</h1>
+            <p>RUC: 80001234-5 | Tel: 424036 | Dirección: Av. Defensores del Chaco y Pucasu</p>
+        </div>
+        <div class="client-details">
+            <p>Fecha de Emisión: 08 de enero 2007</p>
+            <p>Nombre o Razón Social: Arnuldo Amarilla Sosa</p>
+            <p>RUC: 12345678-9</p>
+            <p>Condición de Venta: Contado</p>
+        </div>
+        <table class="details">
+            <thead>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Descripción</th>
+                    <th>Precio Unitario</th>
+                    <th>Valor de Venta</th>
+                    <th>Exentas</th>
+                    <th>5%</th>
+                    <th>10%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>Cajas de cerveza de 12 latas</td>
+                    <td>20.000</td>
+                    <td>100.000</td>
+                    <td>100.000</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Cajas de yerba mate de 12 unidades</td>
+                    <td>30.000</td>
+                    <td>150.000</td>
+                    <td></td>
+                    <td>150.000</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="summary">
+            <thead>
+                <tr>
+                    <th>Total Exentas</th>
+                    <th>Total 5%</th>
+                    <th>Total 10%</th>
+                    <th>Total IVA</th>
+                    <th>Total a Pagar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100.000</td>
+                    <td>7.500</td>
+                    <td>15.000</td>
+                    <td>22.500</td>
+                    <td>360.000</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <p>Es obligatorio consignar el nombre del comprador y su RUC en las facturas.</p>
+            <p>Es indispensable incluir la liquidación del IVA en las facturas.</p>
+        </div>
+    </div>
+</body>
+</html>

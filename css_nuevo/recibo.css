@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.recibo {
+    width: 10cm; /* Se puede ajustar con configuraciones dinámicas si es necesario */
+    height: 8cm; /* Se puede ajustar con configuraciones dinámicas si es necesario */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.recibo h1, .recibo p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.recibo .header, .recibo .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recibo .header div, .recibo .footer div {
+    width: 45%;
+}
+
+.recibo .header div p, .recibo .footer div p {
+    margin: 0;
+}
+
+.recibo .total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.recibo .signature {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.btn-print {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-print:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,17 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.primary-color {
+    color: #007bff; /* Azul */
+}
+.color-secundario {
+    color: #28a745; /* Verde */
+}
